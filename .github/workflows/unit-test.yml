@@ -17,4 +17,4 @@ jobs:
     - name: make all
       run:  make source
     - name: unit test
-      run: ./source/all.out
+      run: cd source && ./all.out
