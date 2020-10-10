@@ -1,12 +1,5 @@
 all: all.out 
 
-PROJECT_NAME = all
-BUILD = build
-
-TEST_SRC = source
-
-TEST_OUTPUT = $(BUILD)/$(PROJECT_NAME).out
-
 
 
 all.out : cropparent.o cropchild.o cropdb.o croptest.o cropdbtest.o
@@ -21,10 +14,7 @@ cropchild.o : cropchild.cpp cropchild.h cropparent.h
 	g++ $< -c    
 cropparent.o : cropparent.cpp cropparent.h
 	g++ $< -c
-test:$(BUILD)
-	g++ $(TEST_SRC) -o $(TEST_OUTPUT) -lcunit
-	./$(TEST_OUTPUT)
+
 clean:
 	rm -rf *.o *.out
-$(BUILD):
-	mkdir build
+
