@@ -1,4 +1,5 @@
-name: Unit testing-
+name: Unit Testing
+
 on:
   push:
     branches: [ main ]
@@ -12,10 +13,8 @@ jobs:
 
     steps:
     - uses: actions/checkout@v2
-    - name: Install Cunit
-      run: sudo apt-get install libgtest-dev && cd /usr/src/gtest && sudo make && sudo cp *.a /usr/lib && sudo ln -s /usr/lib/libgtest.a /usr/local/lib/libgtest.a && sudo ln -s /usr/lib/libgtest_main.a /usr/local/lib/libgtest_main.a
-    - name: make test
-      run:  make -C /source/
-    - name: unit testing
-      run:  ./source/all.out
       
+    - name: make all
+      run:  make source
+    - name: unit test
+      run: cd source && ./all.out
