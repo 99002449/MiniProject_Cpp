@@ -15,7 +15,7 @@ jobs:
     - name: Install cmake
       run: sudo apt-get install cmake
     - name: Install C Unit
-      run: sudo apt-get install libgtest-dev && cd /usr/src/gtest && sudo make && sudo cp *.a /usr/lib && sudo ln -s /usr/lib/libgtest.a /usr/local/lib/libgtest.a && sudo ln -s /usr/lib/libgtest_main.a /usr/local/lib/libgtest_main.a
+      run: sudo apt-get install libgtest-dev && cd /usr/src/gtest && sudo cp *.a /usr/lib && sudo ln -s /usr/lib/libgtest.a /usr/local/lib/libgtest.a && sudo ln -s /usr/lib/libgtest_main.a /usr/local/lib/libgtest_main.a
     - uses: actions/checkout@v2
     
       
@@ -25,3 +25,4 @@ jobs:
       run: chmod a+x ./all.out
     - name: unit test
       run: cd source && ./all.out
+      
