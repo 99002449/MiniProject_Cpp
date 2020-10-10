@@ -15,6 +15,6 @@ jobs:
     - uses: actions/checkout@v2
       
     - name: make all
-      run:  make source
+      run:  make -C /source/
     - name: unit test
       run: cd source && ./all.out
