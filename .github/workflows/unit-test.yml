@@ -12,11 +12,13 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - name: Install C Unit
-      run: sudo apt-get install libgtest-dev && cd /usr/src/gtest && sudo make && sudo cp *.a /usr/lib && sudo ln -s /usr/lib/libgtest.a /usr/local/lib/libgtest.a && sudo ln -s /usr/lib/libgtest_main.a /usr/local/lib/libgtest_main.a
+   
     - uses: actions/checkout@v2
+    
       
     - name: make all
       run:  make -C source/
+    - name: Change mode
+      run: chmod a+x ./all.out
     - name: unit test
       run: cd source && ./all.out
