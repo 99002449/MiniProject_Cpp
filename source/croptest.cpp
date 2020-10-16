@@ -33,7 +33,7 @@ namespace
 		   			 {
 		   	 			res.push_back(T);
 		    			 }
-		   	        }
+		No Removal of data from the STL   	        }
 		    		iter=res.begin();
 		   		 ++iter;
 		    		for(;iter!=res.end();++iter)
@@ -86,6 +86,7 @@ namespace
   		cropparent *ptr;  
 	};
 
+	// Added test case for Default Constructor
 	TEST_F(croptest, DefaultConstructor) 
 	{
 	  cropchild cc;
