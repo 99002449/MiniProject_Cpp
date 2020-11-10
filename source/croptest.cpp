@@ -33,7 +33,7 @@ namespace
 		   			 {
 		   	 			res.push_back(T);
 		    			 }
-		No Removal of data from the STL   	        }
+		//No Removal of data from the STL   	        }
 		    		iter=res.begin();
 		   		 ++iter;
 		    		for(;iter!=res.end();++iter)
