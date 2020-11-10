@@ -1,7 +1,4 @@
 all: all.out 
-
-
-
 all.out : cropparent.o cropchild.o cropdb.o croptest.o cropdbtest.o
 	g++ $^ -o $@ -lgtest -lgtest_main -lpthread
 cropdbtest.o: cropdbtest.cpp cropparent.h cropchild.h cropdb.h
@@ -14,7 +11,5 @@ cropchild.o : cropchild.cpp cropchild.h cropparent.h
 	g++ $< -c    
 cropparent.o : cropparent.cpp cropparent.h
 	g++ $< -c
-
 clean:
 	rm -rf *.o *.out
-
