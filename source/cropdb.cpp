@@ -16,7 +16,7 @@ int cropdb::countAll()
 	std::list<cropchild> :: iterator iter;
 	int count=0;
 	iter=crop_list.begin();
-   	for(;iter!=crop_list.end();iter++)
+   	for(;iter!=crop_list.end();++iter)
     	{
     		++count;
 			
@@ -55,7 +55,7 @@ std::string cropdb::maxProductionDistrict(int year,std::string crop)
 	std::list<cropchild> :: iterator iter;
 	std::string district;
 	int maxProd=0;
-   	for(iter=crop_list.begin();iter!=crop_list.end();iter++)
+   	for(iter=crop_list.begin();iter!=crop_list.end();++iter)
     	{
         	if(  (iter->getCropYear()==year)  && !(iter->getCrop().compare(crop)) )  
         	{	
